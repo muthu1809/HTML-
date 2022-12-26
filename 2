@@ -104,53 +104,6 @@ Courtesy: https://developer.mozilla.org/en-US/docs/Glossary/Clickjacking
 HTTPS: 
 https://letsencrypt.org/
 
-
-Vector Graphics: 
-
-Images should not pixelate when we zoom them.  
-
-Two Types of Images: 
-1. Raster Images
-2. Vector Images
-
-Raster Images: 
-Raster images are defined using a grid of pixels. 
-Eg. .bmp, .png, .jpg, .gif
-
-Vector Images: 
-SVG[Scalable Vector Graphics] Format Images (.svg). 
-It is an XML-based language for describing vector images
-
-
-https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html 
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Vector versus raster</title>
-  </head>
-  <body>
-    <h1>Vector versus raster</h1>
-
-    <img src="star.png" alt="A raster star">
-    <img src="star.svg" alt="A vector star">
-  </body>
-</html>
-
-
-<svg width="300" height="200">
-    <rect width="100%" height="100%" fill="green" />
-</svg>
-
-
-Responsive Images: 
-CSS உடன் பேசுவோம்.  
-
-span Tag: 
-div tag: 
-
-
 Table Creation: 
 
 <table>
@@ -307,3 +260,135 @@ Drop Down / Select Box
   <option value="ruby">Ruby</option>
   <option value=".net">.NET</option>
 </select> 
+
+HTML Block and Inline Elements: 
+Block elements எப்போதும் புது வரியில் தொடங்கும். 
+எ.கா. <p> <div> 
+<p> I am a block element and will start in new line
+<div> I am a block element and will start in new line
+
+Inline Elements புது வரியில் தொடங்கா.  
+எ.கா. <span> 
+I am an Inline Element <span> and will not start in new line. </span> 
+
+<p>I like <span style="color:red">red</span> color</p> 
+
+Web Form: 
+ஒரு பயனர், இணையத்தளம் ஒன்றிற்கு அனுப்புகின்ற தரவுகள் 
+
+
+Browse கொடுத்து 
+
+accept: 
+------
+
+<p>
+  <label for="soundFile">Select an audio file:</label>
+  <input type="file" id="soundFile" accept="audio/*">
+</p>
+<p>
+  <label for="videoFile">Select a video file:</label>
+  <input type="file" id="videoFile" accept="video/*">
+</p>
+<p>
+  <label for="imageFile">Select some images:</label>
+  <input type="file" id="imageFile" accept="image/*" multiple>
+</p>
+
+alt: 
+----
+
+
+<form action="/index.jsp">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname">
+  <input type="image" src="submit.gif" alt="ok" width="48" height="48">
+</form>
+
+autocomplete: 
+-----------
+
+<form action="/index.jsp" autocomplete="on">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" autocomplete="off"><br><br>
+  <input type="submit">
+</form> 
+
+autofocus: 
+---------
+<form action="/index.jsp" autocomplete="on">
+<label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" autofocus><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit">
+</form>
+
+
+Input - Button: 
+--------------
+<input class="favorite styled"
+       type="button"
+       value="Add to favorites">
+
+இப்போது input type = "button" என்பதற்குப் பதிலாக, button tagஐயே பயன்படுத்துகிறார்கள்.  
+<button class="favorite styled"
+        type="button">
+    Add to favorites
+</button>
+
+Keyboard Shortcuts to Buttons: 
+<input type="button" value="Start machine" accesskey="s">
+
+குறிப்பு: 
+    Edge, IE, Chrome, Safari, Opera 15+: [ALT] + accesskey
+    Firefox: [ALT] [SHIFT] + accesskey
+
+button ஐ disabled ஆக்குவது எப்படி?
+<input type="button" value="Disable me" disabled>
+
+datalist: 
+--------
+recommended options கொடுக்கப் பயன்படும்;
+
+<label for="sweet-choice">Choose a flavor:</label>
+<input list="sweet-flavors" id="sweet-choice" name="sweet-choice" />
+
+<datalist id="sweet-flavors">
+    <option value="லட்டு">
+    <option value="ஜிலேபி">
+    <option value="ஜாங்கிரி">
+    <option value="மைசூர்பாகு">
+    <option value="பாதுஷா">
+</datalist>
+
+range: 
+---------
+<input type="range" list="tickmarks">
+<datalist id="tickmarks">
+  <option value="0">
+  <option value="10">
+  <option value="20">
+  <option value="30">
+</datalist>
+
+color: 
+--------
+<input type="color" list="redColors">
+<datalist id="redColors">
+  <option value="#800000">
+  <option value="#8B0000">
+  <option value="#A52A2A">
+  <option value="#DC143C">
+</datalist>
+
+progress: 
+---------
+<label for="file">Java</label>
+<progress id="file" max="100" value="70"> 70% </progress> <br>
+<label for="file">Html</label>
+<progress id="file" max="100" value="80"> 80% </progress>
