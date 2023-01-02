@@ -12,7 +12,7 @@ index.html
 </head> 
 <body> 
 <p class="first"> Dont Giveup! Keep on Trying! </p>
-<p class="second">Even through it seems to be impossible, It will happen in your life one day. </p>
+<p class="second">Even though it seems to be impossible, It will happen in your life one day. </p>
 <p class="third"> All the very best Friends! Wait to receive the surprises in your life!!!!!!</p>
 </body> 
 </html> 
@@ -26,9 +26,18 @@ p.second
 p.third
 {color:rgb(255,0,0); text-align:center; text-decoration:underline; text-decoration:capitalize;}
 
+rgba(190, 80, 120);
+rgba(30%, 60%, 25%);
+rgba(72, 122, 180, .7);
+rgba(72 122 180 / .2);
+
+The rgba() functional notation expresses a color according to its red, green, and blue components. 
+An optional alpha component represents the color's transparency.
+
 -------------
 Font: 
-font-family - எழுத்துகளின் வகை, பல எழுத்து வகையைக் குறிப்பிடலாம்.  முதல் மதிப்பு இல்லையெனில் இரண்டாவது வகையிலும், இரண்டாவதும் இல்லையெனில் 3-வது வகையிலும் எழுத்துக்களை வெளிப்படுத்தும்.
+font-family - எழுத்துகளின் வகை, பல எழுத்து வகையைக் குறிப்பிடலாம்.  முதல் மதிப்பு இல்லையெனில் இரண்டாவது வகையிலும், இரண்டாவதும் இல்லையெனில் 3ஆவது வகையிலும்
+எழுத்துக்களை வெளிப்படுத்தும்.
 font-style :    Normal, Italic, Bold, Oblique
 
 font-size: px, em (ephemeral) 
@@ -38,22 +47,21 @@ em (ephemeral): Relative Unit.
 
 index.html: 
 ----------
-<html> 
-<head> 
-<link rel="stylesheet" href="style1.css"> 
-</head> 
-<body> 
-<p class="first"> விடாமுயற்சி தொடர்பயிற்சி </p>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p class="first"> உளி விழும் என அழுத கற்கள் சிற்பங்கள் ஆவதில்லை</p>
 <p class="second"> எங்கே விழுந்தாய் என்று பார்க்காதே!  எங்கே வழுக்கியது என்று பார்!  </p>
 <p class="third"> தொடக்கத்தில் எல்லாமே கடினம் தான்!  தொடர்ந்து செய்தால் எதுவும் எளிமை தான்!</p>
-</body> 
-</html> 
-
+</body>
+</html>
 
 style1.css
 -----------
 
-p.first {font-family:"Tiems New Roman", Times, serif; font-style:Oblique; font-size:10;}
+p.first {font-family:"Times New Roman", Times, serif; font-style:Oblique; font-size:30;}
 p.second {font-style:italic; font-size:20;}
 h1.third {font-style:bold; font-size:30;}
 
@@ -160,12 +168,14 @@ TABLES:
 style1.css
 ----------
 
-table {width:"60%"; height: "40%"; border: 3px solid red;}
-th {border: 2px solid green;}
-td {border: 1px solid orange;}
+table {width:70%; height: 30%; border: 3px solid red;}
+th {border: 2px solid blue;}
+td {border: 1px solid red;}
 
 இதே CSS கோப்பில்: 
 table {width:60%; width:40%; border: 3px solid red; border-collapse: collapse;} 
+முயன்று பாருங்கள்.  பிறகு 
+border-collapse: separate; பாருங்கள். 
 
 
 Divisions: 
@@ -403,12 +413,4 @@ div.one img { display:inline; margin: 5px; border:1px solid yellow; width:170px;
 div.one a:hover img{border:1px solid blue;opacity: 1; filter:alpha(opacity=100);}
 
 div.two {text-align:center; font-weight:normal; width:120px; margin:5px;}
-
-
-
-
-
-
-
-
 
