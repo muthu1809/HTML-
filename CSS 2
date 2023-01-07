@@ -178,12 +178,10 @@ tr:nth-child(even){background-color: #f2f2f2;}
 table {width:60%; width:40%; border: 3px solid red; border-collapse: collapse;} 
 முயன்று பாருங்கள்.  பிறகு 
 border-collapse: separate; பாருங்கள். 
-
-
 Divisions: 
 
-<html>
-<head> 
+
+
 <html>
 <head> 
 <link rel="stylesheet" href="styles/style1.css"> 
