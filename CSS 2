@@ -171,6 +171,8 @@ style1.css
 table {width:70%; height: 30%; border: 3px solid red;}
 th {border: 2px solid blue;}
 td {border: 1px solid red;}
+tr:hover {background-color: #ddd;}
+tr:nth-child(even){background-color: #f2f2f2;}
 
 இதே CSS கோப்பில்: 
 table {width:60%; width:40%; border: 3px solid red; border-collapse: collapse;} 
