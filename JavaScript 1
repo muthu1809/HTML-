@@ -358,7 +358,16 @@ alert( userName );
 
 Parameters:
 ----------
+function showMessage(from, text) {
 
+  from = '*' + from + '*'; 
+
+  alert( from + ': ' + text );
+}
+
+let from = "Amuthan";
+
+showMessage(from, "Hello");
 
 
 How to Execute using Notepad:
