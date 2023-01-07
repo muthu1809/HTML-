@@ -252,7 +252,112 @@ alert( Boolean(1) ); // true
 alert( Boolean(0) ); // false
 
 alert( Boolean("hello") ); // true
-alert( Boolean("") ); // fals
+alert( Boolean("") ); // false
+
+Looping: while, do...while and for:
+-----------------------------------
+
+while:
+let i = 1;
+while (i <= 3) {
+  alert( i );
+  i++;
+}
+
+let i = 1;
+do {
+  alert( i );
+  i++;
+} while (i <= 3);
+
+for (let i = 0; i < 3; i++)
+{
+  alert(i);
+}
+
+break:
+let sum = 0;
+while (true) {
+  let value = +prompt("Enter a number", '');
+  if (!value) break; // (*)
+  sum += value;
+}
+alert( 'Sum: ' + sum );
+
+Labels:
+ஜாவாவில் இருப்பதைப் போலவே, இங்கேயும் labels உண்டு.
+
+outer: for (let row = 0; row < 3; row++) {
+
+  for (let col = 0; col < 3; col++) {
+
+    let input = prompt(`Value at looping (${row},${col})`, '');
+
+    // if an empty string or canceled, then break out of both loops
+    if (!input) break outer; // (*)
+
+    // do something with the value...
+  }
+}
+
+alert('Done!');
+
+
+Functions: 
+------------
+
+
+function showMessage() {
+  alert( 'Hello everyone!' );
+}
+
+
+function showMessage() {
+  alert( 'Hello everyone!' );
+}
+
+showMessage();
+showMessage();
+
+Local Variable: 
+function showMessage() {
+  let message = "Hello, I'm JavaScript!"; // local variable
+
+  alert( message );
+}
+
+showMessage(); // Hello, I'm JavaScript!
+
+alert( message ); 
+
+Outer variables: 
+let userName = 'Nandhan';
+
+function showMessage() {
+  let message = 'Hello, ' + userName;
+  alert(message);
+}
+
+showMessage(); // Hello, Nandhan 
+
+--
+let userName = 'Viyan';
+
+function showMessage() {
+  userName = "Nandhan"; // (1) changed the outer variable
+
+  let message = 'Hello, ' + userName;
+  alert(message);
+}
+
+alert( userName ); // Viyan before the function call
+
+showMessage();
+
+alert( userName ); 
+
+Parameters:
+----------
 
 
 
