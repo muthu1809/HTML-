@@ -140,50 +140,120 @@ z = '37' + 7 // "377"
 '37' - 7 // 30
 '37' * 7 // 259
 
-strings into integer:
+Datatypes: 
+8 Datatypes in JavaScript. 
 
-parseInt('101', 2) // 5
-parseInt('101', 8) // 65
+let message = "vanakkam";
+message = 78;
 
-Literals:
-Literals represent values in JavaScript. These are fixed values—not variables—that you literally provide in your script.
+இதை ஜாவாஸ்கிரிப்ட் ஏற்றுக் கொள்ளும்.  ஏனென்றால், ஜாவாஸ்கிரிப்ட் ஒரு Dynamically Typed Programming Language.  
 
-Array literals:
-const players = ['Messi', 'Ronaldo', 'Bhutia'];
+1. Number: 
+Integer, Float இரண்டிற்குமே Number தான். 
 
+alert( 1 / 0 ); // infinity என்று கொடுக்கும். 
+alert(1/"Hi"); // NaN என்று கொடுக்கும்.  Not a Number
 
-const players = ['Messi', 'Ronaldo', 'Bhutia'];
-console.log(players)
+2. BigInt: 
+2^53 - 1 (9007199254740991) ஐவிடப் பெரியது, -2^53 - 1 ஐவிடச் சின்ன எண் வேண்டும் என்றால், BigInt பயன்படுத்த வேண்டும். 
 
+3. String: 
+Double Quotes, Single Quotes, Back Ticks மூன்றும் பயன்படுத்தலாம். 
+let str = "Vanakkam";
+let str2 = 'Single quotes are ok too';
+let phrase = `We can embed another ${str}`;
 
+str = 'Vanakkam'
+alert(`${str}  Chennai`)
 
-
-
-const players = ['Messi', '', 'Bhutia'];
-console.log(players); //[ 'Messi', <1 empty item>, 'Bhutia' ]
-
-
-Object Literals:
-
-An object literal is a list of zero or more pairs of property names and associated values of an object, enclosed in curly braces ({}).
-
-const sales = 'Toyota';
-
-function carTypes(name) {
-  return name === 'Honda' ? name : `Sorry, we don't sell ${name}.`;
-}
-
-const car = { myCar: 'City', getCar: carTypes('Honda'), special: sales };
-
-console.log(car.myCar);   // City
-console.log(car.getCar);  // Honda
-console.log(car.special); // Toyota
+alert( `the result is ${10 + 20}` );
 
 
-const car = { manyCars: { a: 'Saab', b: 'Jeep' }, 7: 'Mazda' };
+4. Boolean: 
+true or false
 
-console.log(car.manyCars.b); // Jeep
-console.log(car[7]); // Mazda
+5. "null" value:
+ஜாவாஸ்கிரிப்டில் null என்றால் nothing, empty, unknown value. 
+let age = null; 
+
+6. "undefined" value:
+let age;
+
+alert(age); // "undefined" என்று வரும்.  
+
+7. Object 
+8. Symbols
+இவை இரண்டும் non-primitive datatypes. இவை இரண்டும் collections of dataக்குப் பயன்படும்.  
+
+typeof operator: 
+ஜாவாவில் instanceof operator செய்யும் வேலையை இது செய்யும்.  
+
+let a = 5
+
+
+Interactions:
+-------------
+alert, prompt, confirm
+
+1. alert:
+ஏற்கெனவே பார்த்து விட்டோம்.
+alert("Vanakkam");
+இந்த alert popupஐ modal window என்று சொல்வார்கள்.  [அந்த நேரத்தில் browserஇல் எந்த வேலையும் செய்ய முடியாது]
+
+2. prompt:
+modal window - ஒரு input box உடன்.
+இரண்டு argumentsஐ ஏற்கும்.  இரண்டாவது argument கட்டாயமில்லை.
+
+let age = prompt('உங்கள் வயது என்ன?', 100);
+
+alert(`உங்களுக்கு  ${age} வயது!`); // You are 100 years old!
+
+3. confirm:
+கேள்வியுடன் கூடிய modal window.
+let ok = confirm("நலம் தானா?");
+
+alert( ok ); 
+
+பயிற்சி: 
+உங்கள் பெயரை உள்ளீடாக வாங்க, ஒரு web page உருவாக்குங்கள். 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+  <script>
+    'use strict';
+
+    let name = prompt("What is your name?", "");
+    alert(name);
+  </script>
+
+</body>
+</html>
+
+
+
+Type Conversion: 
+----------------
+let value = true;
+alert(typeof value); // boolean
+
+value = String(value); // now value is a string "true"
+alert(typeof value); 
+
+let str = "123";
+alert(typeof str); // string
+
+let num = Number(str); // becomes a number 123
+
+alert(typeof num);
+
+alert( Boolean(1) ); // true
+alert( Boolean(0) ); // false
+
+alert( Boolean("hello") ); // true
+alert( Boolean("") ); // fals
+
 
 
 How to Execute using Notepad:
