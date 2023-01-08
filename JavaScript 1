@@ -365,9 +365,75 @@ function showMessage(from, text) {
   alert( from + ': ' + text );
 }
 
-let from = "Amuthan";
+let from = "Amuthan says to you: ";
 
 showMessage(from, "Hello");
+----
+function showPrimes(n) {
+  nextPrime: for (let i = 2; i < n; i++) {
+
+    for (let j = 2; j < i; j++) {
+      if (i % j == 0) continue nextPrime;
+    }
+
+    alert( i ); // a prime
+  }
+}
+
+showPrimes(20);
+----
+Function expressions:
+In JavaScript, Functions are special kind of values. 
+function sayHi() {
+  alert( "Hello" );
+}
+மேலே இருப்பது function.  இதையே function expressionஆக எழுதலாம். 
+
+let sayHi = function() {
+  alert( "Hello" );
+};
+
+alert(sayHi);
+
+Function is a value: 
+-------------------
+function sayHi() {
+  alert( "Hello" );
+}
+
+alert( sayHi ); // shows the function code
+
+மேல் உள்ளதில் alert(sayHi()) கொடுத்துப் பாருங்கள்.  
+
+https://javascript.info/function-expressions
+
+Arrow Functions: 
+
+let sum = (a, b) => a + b;
+
+/* This arrow function is a shorter form of:
+
+let sum = function(a, b) {
+  return a + b;
+};
+*/
+
+alert( sum(1, 2) ); // 3
+
+Arguments இல்லையென்றால்:
+let sayHi = () => alert("Hello!");
+
+sayHi();
+
+Multiline Arrow Functions: 
+let sum = (a, b) => {  // the curly brace opens a multiline function
+  let result = a + b;
+  return result; // if we use curly braces, then we need an explicit "return"
+};
+
+alert( sum(1, 2) ); // 3
+
+
 
 
 How to Execute using Notepad:
@@ -384,8 +450,21 @@ Document Object Model:
 
 The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content.
 
+The document object is the main “entry point” to the page.
+
 
 Accessing DOM:
+இதை முயன்று பாருங்கள். 
+// change the background color to red
+document.body.style.background = "red";
+
+// change it back after 1 second
+setTimeout(() => document.body.style.background = "", 1000);
+
+setTimeout(() => document.body.style.background = "green", 1000); கொடுத்துப் பாருங்கள். 
+
+
+
 HTML கோப்பில்:
 
 <body onload="console.log('Welcome to my home page!');">
