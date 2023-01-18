@@ -231,6 +231,8 @@ let age = prompt('உங்கள் வயது என்ன?', 100);
 
 alert(`உங்களுக்கு  ${age} வயது!`); // You are 100 years old!
 
+Firefoxஇல் இரண்டாவது முயல: 
+https://discourse.mozilla.org/t/syntaxerror-redeclaration-of-formal-parameter/83083/4
 3. confirm:
 கேள்வியுடன் கூடிய modal window.
 let ok = confirm("நலம் தானா?");
