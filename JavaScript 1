@@ -179,9 +179,30 @@ let age;
 alert(age); // "undefined" என்று வரும்.  
 
 7. Object 
-An object can be created with figure brackets {…} with an optional list of properties. A property is a “key: value” pair, where key is a string (also called a “property name”), and value can be anything.
+key value pair ஆக உருவாக்கப்படும்.  non-primitive datatype. key-value சேர்ந்து property எனச் சொல்லப்படும்.  key என்பது string ஆகவும் value எதுவாகவும் இருக்கலாம். 
 
+உருவாக்கும் முறைகள்: 
+let user = new Object(); // "object constructor" syntax
+let user = {};
 
+let user = {     // an object
+  name: "அமுதன்",  
+  age: 10        
+};
+
+alert(user.name);
+alert(user.age);
+
+இன்னொரு property சேர்க்க வேண்டுமானால்: 
+user.isStudent = true;
+
+alert(user.isStudent); 
+
+user["isTrainee"] = false; 
+alert(user.isTrainee);
+
+propertyஐ நீக்க வேண்டுமானால்: 
+delete user.age;
 
 8. Symbols
 இவை இரண்டும் non-primitive datatypes. இவை இரண்டும் collections of dataக்குப் பயன்படும்.  
@@ -190,6 +211,7 @@ typeof operator:
 ஜாவாவில் instanceof operator செய்யும் வேலையை இது செய்யும்.  
 
 let a = 5
+alert(typeof(a))
 
 
 Interactions:
