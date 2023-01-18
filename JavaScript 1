@@ -52,11 +52,14 @@ Ctrl+Shift+Iக்குப் பிறகு Ctrl+B
 மேல் உள்ளதை run பண்ண: Ctrl+Enter
 
 அடிப்படைகள்:
-JavaScript borrows most of its syntax from Java, C, and C++, but it has also been influenced by Awk, Perl, and Python.
+ஜாவாஸ்கிரிப்டின் syntax ஜாவா, சி, சி++ இல் இருந்து வந்தது.  Awk, Perl, Python influenceஉம் உண்டு. 
+
+Types of Variables: 
 
 JavaScript has three kinds of variable declarations.
 
-1. var:
+1. var: function scoped அல்லது globally scoped variable. 
+
 var statement declares a function-scoped or globally-scoped variable, optionally initializing it to a value.
 
 var x = 1;
@@ -71,19 +74,21 @@ if (x === 1) {
 console.log(x);
 // expected output: 2
 
+var இப்போது அவ்வளவாகப் பயன்படுத்தப்படுவதில்லை.
+
 let:
 The let declaration declares a block-scoped local variable, optionally initializing it to a value.
 
-let x = 1;
+let a = 1;
 
-if (x === 1) {
-  let x = 2;
+if (a === 1) {
+  let a = 2;
 
-  console.log(x);
+  console.log(a);
   // expected output: 2
 }
 
-console.log(x);
+console.log(a);
 // expected output: 1
 
 const:
@@ -108,24 +113,12 @@ A JavaScript identifier usually starts with a letter, underscore (_), or dollar 
 
 In var and let declarations, the initializer is optional. If a variable is declared without an initializer, it is assigned the value undefined.
 
-let x;
-console.log(x); // logs "undefined"
+let num;
+console.log(num); // logs "undefined"
 
 Datatypes:
 
-8 Datatypes:
-
-7 Datatypes are Primitive Datatypes:
-
-Boolean     : true or false
-null        : A special keyword denoting a null value.
-undefined   : A top-level property whose value is not defined.
-Number      : An integer or floating point number. 42 or 3.14159.
-BigInt      :An integer with arbitrary precision 90071992547992n.
-String      : A sequence of characters that represent a text value
-Symbol      : A data type whose instances are unique & immutable.
-Object
-
+8 Basic Datatypes:
 
 JavaScript is a dynamically typed language. This means you don't have to specify the data type of a variable when you declare it. It also means that data types are automatically converted as-needed during script execution.
 
@@ -172,6 +165,10 @@ alert( `the result is ${10 + 20}` );
 4. Boolean: 
 true or false
 
+let isGreater = 5 > 10;
+
+alert( isGreater );
+
 5. "null" value:
 ஜாவாஸ்கிரிப்டில் null என்றால் nothing, empty, unknown value. 
 let age = null; 
@@ -182,6 +179,10 @@ let age;
 alert(age); // "undefined" என்று வரும்.  
 
 7. Object 
+An object can be created with figure brackets {…} with an optional list of properties. A property is a “key: value” pair, where key is a string (also called a “property name”), and value can be anything.
+
+
+
 8. Symbols
 இவை இரண்டும் non-primitive datatypes. இவை இரண்டும் collections of dataக்குப் பயன்படும்.  
 
