@@ -474,9 +474,17 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types
 
 Document Object Model:
 
-The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content.
+The Document Object Model (DOM) is a programming interface for web documents. 
+It represents the page so that programs can change the document structure, style, and content.
 
 The document object is the main “entry point” to the page.
+
+Document Object Model (DOM)ஐப் பொறுத்தவரை ஒவ்வொரு HTML tagஉம் ஒரு Object. Nested tags --> “children” of the enclosing one. 
+tagக்குள் இருக்கும் textஉம் ஒரு object தான். 
+
+DOM Example: https://javascript.info/dom-nodes 
+
+HTMLஐ DOMஆக மாற்றிப் பார்க்க: https://software.hixie.ch/utilities/js/live-dom-viewer/
 
 
 Accessing DOM:
@@ -514,6 +522,62 @@ HTML கோப்பில்:
   </head>
   <body></body>
 </html>
+
+-----------------
+
+<div>First div</div>
+
+<script>
+  let divs = document.getElementsByTagName('div');
+  alert(divs.length); // 1
+</script>
+
+<div>Second div</div>
+
+<script>
+  alert(divs.length); // 2
+</script>
+---------------
+<table id="table">
+  <tr>
+    <td>Your age:</td>
+
+    <td>
+      <label>
+        <input type="radio" name="age" value="young" checked> less than 18
+      </label>
+      <label>
+        <input type="radio" name="age" value="mature"> from 18 to 50
+      </label>
+      <label>
+        <input type="radio" name="age" value="senior"> more than 60
+      </label>
+    </td>
+  </tr>
+</table>
+
+<script>
+  let inputs = table.getElementsByTagName('input');
+
+  for (let input of inputs) {
+    alert( input.value + ': ' + input.checked );
+  }
+</script>
+-----------------
+
+DOM Properties: 
+Browser, ஒரு html pageஐ load பண்ணும் போது, அதை வாசித்து (parse), DOM Objectsஐ உருவாக்கும்.  அதில் இருக்கும் HTML attributes தான் 
+DOM Objectsஇன் properties.  
+
+எ.கா. 
+<body id="page"> என்பதை body.id="page" என்று புரிந்து கொள்ளலாம்.  
+
+<body id="test">
+  <script>
+    alert(document.body.id); // test
+  </script>
+</body>
+
 
 DOM Functions: createElement, createTextNode, appendChild
 
@@ -643,6 +707,11 @@ document.getElementById("toCity").innerHTML=cityName; சேர்க்க.
 இப்போது இந்த function ஐ அப்படியே வெட்டி எடுத்து index.jsஇல் வைத்துக் கொள்ளலாம். <script> </script> இரண்டையும் நீக்கி விடலாம்.
 
 --------
+DOM Property Viewer: 
+Firefoxஇல் DOM Property Viewer, defaultஆக இருக்காது.  Ctrl+Shift+I கொடுத்து பின்னர் F1 கொடுங்கள்.  அதில் DOMஐத் தேர்ந்து கொள்ளுங்கள்.  
+
+https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html#tool-toolbox-settings
+
 DOM - Select By Tag Name:
 ------------------------
 
