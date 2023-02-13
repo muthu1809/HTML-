@@ -52,9 +52,9 @@ index.html:
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<p class="first"> உளி விழும் என அழுத கற்கள் சிற்பங்கள் ஆவதில்லை</p>
-<p class="second"> எங்கே விழுந்தாய் என்று பார்க்காதே!  எங்கே வழுக்கியது என்று பார்!  </p>
-<p class="third"> தொடக்கத்தில் எல்லாமே கடினம் தான்!  தொடர்ந்து செய்தால் எதுவும் எளிமை தான்!</p>
+<p class="first"> I'm first paragraph உளி விழும் என அழுத கற்கள் சிற்பங்கள் ஆவதில்லை</p>
+<p class="second"> I'm second paragraph எங்கே விழுந்தாய் என்று பார்க்காதே!  எங்கே வழுக்கியது என்று பார்!  </p>
+<p class="third"> I'm second paragraph தொடக்கத்தில் எல்லாமே கடினம் தான்!  தொடர்ந்து செய்தால் எதுவும் எளிமை தான்!</p>
 </body>
 </html>
 
