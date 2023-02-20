@@ -3,14 +3,14 @@ Flex Box: flexbox is designed for one-dimensional layout
 
 <html>
 <head> 
-<link rel="stylesheet" href="styles/style1.css"> 
+<link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
 <div class="wrapper">
-  <div class="box1">ஒன்று </div>
-  <div class="box2">இரண்டு</div>
-  <div class="box3">மூன்று</div>
+  <div class="box1">1 ஒன்று </div>
+  <div class="box2">2 இரண்டு</div>
+  <div class="box3">3 மூன்று</div>
 </div>
 
 </body>
@@ -23,6 +23,11 @@ style1.css
   display: flex;
 }
 
+முயன்று பாருங்கள்: 
+.wrapper {
+  display: flex;
+flex-direction: column;
+}
 style1.css
 -----------
 .wrapper {
@@ -39,7 +44,7 @@ Grid Layout - For Two Dimensional Layout
 
 <html>
 <head> 
-<link rel="stylesheet" href="styles/style1.css"> 
+<link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
@@ -65,7 +70,7 @@ Grid Layout - For Two Dimensional Layout
 நாம் விரும்பிய படி layout அமைக்க: 
 <html>
 <head> 
-<link rel="stylesheet" href="styles/style1.css"> 
+<link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
@@ -593,7 +598,7 @@ Multiple Column Layout:
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="styles/style1.css"> 
+<link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 <h1>Create Multiple Columns</h1>
