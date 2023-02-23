@@ -1,23 +1,33 @@
 ஜாவா ஸ்கிரிப்ட்:
 
 ஏன் படிக்க வேண்டும்?
-JavaScript is a programming language that adds interactivity to your website. This happens in games, in the behavior of responses when buttons are pressed or with data entry on forms; with dynamic styling; with animation, etc.
+JavaScript is a programming language that adds interactivity to your website. 
+This happens in games, in the behavior of responses when buttons are pressed or 
+with data entry on forms; with dynamic styling; with animation, etc.
 
 யார் கண்டுபிடித்தார்?
 Brendan Eich.
 
 ஜாவாஸ்கிரிப்ட் என்றால் என்ன?
-JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.[Lambda Expressions]
+JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language 
+with first-class functions.[Lambda Expressions]
 
-JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
+JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, 
+supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
 
 ஜாவாஸ்கிரிப்ட், ஜாவா ஒன்றா?
 இல்லை.
-ஜாவாவின் static type, strong type checking இங்கில்லை.  ஜாவாவைப் போன்ற syntax, naming convention, basic control flow statements இங்கும் உண்டு.  அதனால் தான் livescript என்னும் பெயரில் இருந்து ஜாவாஸ்கிரிப்ட் என்று பெயர் வைத்தார்கள்.
+ஜாவாவின் static type, strong type checking இங்கில்லை. 
+ஜாவாவைப் போன்ற syntax, naming convention, basic control flow statements இங்கும் உண்டு.  
+அதனால் தான் livescript என்னும் பெயரில் இருந்து ஜாவாஸ்கிரிப்ட் என்று பெயர் வைத்தார்கள்.
 
-ஜாவாஸ்கிரிப்டில் numeric, Boolean, and string  உண்டு.
+ஜாவாஸ்கிரிப்டில் numeric, Boolean and string  உண்டு.
 
-JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.
+JavaScript is a very free-form language compared to Java.
+You do not have to declare all variables, classes, and methods. 
+You do not have to be concerned with whether methods are public, private, or protected, 
+and you do not have to implement interfaces. 
+Variables, parameters, and function return types are not explicitly typed.
 
 Java is a class-based programming language designed for fast execution and type safety.
 
@@ -60,7 +70,8 @@ JavaScript has three kinds of variable declarations.
 
 1. var: function scoped அல்லது globally scoped variable. 
 
-var statement declares a function-scoped or globally-scoped variable, optionally initializing it to a value.
+var statement declares a function-scoped or globally-scoped variable, 
+optionally initializing it to a value.
 
 var x = 1;
 
@@ -71,19 +82,19 @@ if (x === 1) {
   // expected output: 2
 }
 
-console.log(x);
+console.log('outside if', x);
 // expected output: 2
 
 var இப்போது அவ்வளவாகப் பயன்படுத்தப்படுவதில்லை.
 
 let:
-The let declaration declares a block-scoped local variable, optionally initializing it to a value.
+The let declaration declares a block-scoped local variable, optionally initializing it to 
+a value.
 
 let a = 1;
-
-if (a === 1) {
+if (a === 1) 
+{
   let a = 2;
-
   console.log(a);
   // expected output: 2
 }
@@ -95,7 +106,6 @@ const:
 The const declaration creates block-scoped constants.
 
 const number = 42;
-
 try {
   number = 99;
 } catch (err) {
@@ -111,7 +121,8 @@ console.log(number);
 Variables: [Identifiers]
 A JavaScript identifier usually starts with a letter, underscore (_), or dollar sign ($).
 
-In var and let declarations, the initializer is optional. If a variable is declared without an initializer, it is assigned the value undefined.
+In var and let declarations, the initializer is optional. If a variable is declared without 
+an initializer, it is assigned the value undefined.
 
 let num;
 console.log(num); // logs "undefined"
