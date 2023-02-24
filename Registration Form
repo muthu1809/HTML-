@@ -193,6 +193,159 @@ textarea{
 }
 
 Step 7: 
+ label{
+    padding: 12px 12px 12px 0;
+}
+
+Eg. 
+    padding: 25px 50px 75px 100px;
+        top padding is 25px
+        right padding is 50px
+        bottom padding is 75px
+        left padding is 100px
+        
+Step 7-b: 
+ label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+Refer: https://developer.mozilla.org/en-US/docs/Web/CSS/display
+
+        
+ Step 8: 
+ input[type=submit] {
+    background-color: green;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+Step 9: 
+.container{
+    border-radius: 5px;
+    background-color:#f2f2f2;
+    padding: 20px;
+}
+
+Step 10: 
+.col-1{
+    float: left;
+    width:10%;
+    margin-top: 6px;
+}
+.col-2{
+    float: left;
+    width: 90%;
+    margin-top: 6px;
+}
+Refer: https://developer.mozilla.org/en-US/docs/Web/CSS/float
+
+Step 11: 
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+display: table --> behaves like table element. 
+
+Refer: https://developer.mozilla.org/en-US/docs/Web/CSS/clear
+
+style.css: 
+--------
+
+
+h1{
+    font-family: Arial;
+    font-size: 20px; 
+    font-style: normal;
+    font-weight: bold;
+    color: brown;
+    text-align: center;
+    text-decoration: underline;
+}
+
+input[type=text], input[type=email], input[type=number], input[type=select], input[type=date],input[type=select],input[type=password], input[type=tel]
+{
+    width: 40%;
+    padding: 12px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 2%;
+    
+}
+
+input[type=radio],input[type=checkbox]{
+    width: 1%;
+    padding-left: 0%;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 4px;
+    
+}
+
+textarea{
+    width:40%;
+    padding: 12px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+}
+
+label{
+    padding:  12px 12px 12px 0;
+    display: inline-block; 
+}
+
+
+input[type=submit] {
+    background-color: green;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+}
+
+input[type=submit]:hover {
+background-color: red;
+}
+
+.container{
+    border-radius: 5px;
+    background-color:#f2f2f2;
+    padding: 20px;
+}
+
+.col-1{
+    float: left;
+    width:10%;
+    margin-top: 6px;
+}
+.col-2{
+    float: left;
+    width: 90%;
+    margin-top: 6px;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  
