@@ -222,8 +222,6 @@ index.html:
 </head>	 
 <body>
 <h2> Select By Tag Name By ID எடுத்துக்காட்டு</h2>
-<input placeHolder="Enter City Name"> இல் இருந்து<br>
-
 <div id = "cities">
 <input placeHolder="Enter City Name"> இல் இருந்து<br>
 <input placeHolder="Enter City Name"> வரை<br>
@@ -311,6 +309,8 @@ function changeColor()
 			minute = date.getMinutes(); 
 			second = date.getSeconds(); 
 			fulldate = date.toLocaleTimeString()
+			//fulldate = date.toLocaleTimeString('en-US')
+			fulldate = date.toLocaleTimeString('en-GB')
 			x = document.getElementById("p1");
 		    x.innerHTML = fulldate; 
 			if(second%2==0)
