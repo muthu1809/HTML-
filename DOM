@@ -112,9 +112,9 @@ color: yellow;
 </head>	 
 <body>
 <h2> Select By Tag Name எடுத்துக்காட்டு</h2>
-<input placeHolder="Enter City Name"> இல் இருந்து<br>
-<input placeHolder="Enter City Name"> வரை<br>
-<input placeHolder="Enter City Name"> இடைத்தங்கல்<br>
+<input placeHolder="Enter City Name"> இல் இருந்து/ From<br> 
+<input placeHolder="Enter City Name"> வரை / To <br>
+<input placeHolder="Enter City Name"> இடைத்தங்கல் / Stay<br>
 <button onclick="getCityName()"> Submit </button>
 <p> </p>
 <p> </p>
@@ -133,8 +133,8 @@ color: yellow;
 </body>
 </html>
 
-மேல் உள்ளதைக் கையாளத் தான் for loop.  
-for(int i=0; i<cityNamesInput.length;i++)
+மேல் உள்ளதைக் கையாளத் தான் for loop.  [To handle this repeated activity, we go with for loop]
+for(let i=0; i<cityNamesInput.length;i++)
 {
 cityNamesOutput[i].innerHTML =cityNamesInput[i].value
 }
@@ -143,8 +143,9 @@ cityNamesOutput[i].innerHTML =cityNamesInput[i].value
 Select By Tag Name By ID:
 tag வைத்து எடுக்கும் போது எல்லா inputஉம் வர வாய்ப்பு உள்ளதே!  அதை எப்படிக் கையாள்வது?
 அதற்குத் தான் div id பயன்படுத்தப் போகிறோம்.  
+[If We use tag, We shall get all inputs, right?  How can we handle that?  That's the reason, we go with div id] 
 
-கீழ் உள்ளதைச் செயல்படுத்தி அதில் உள்ள சிக்கலைக் கவனியுங்கள்.  
+கீழ் உள்ளதைச் செயல்படுத்தி அதில் உள்ள சிக்கலைக் கவனியுங்கள்.  [Kindly observe the difficulty in below code] 
 
 <!DOCTYPE html>
 <html>
@@ -167,12 +168,12 @@ color: yellow;
 </head>	 
 <body>
 <h2> Select By Tag Name By ID எடுத்துக்காட்டு</h2>
-<input placeHolder="Enter City Name"> இல் இருந்து<br>
+<input placeHolder="Enter City Name"> இல் இருந்து / From <br>
 
 <div id = "cities">
-<input placeHolder="Enter City Name"> இல் இருந்து<br>
-<input placeHolder="Enter City Name"> வரை<br>
-<input placeHolder="Enter City Name"> இடைத்தங்கல்<br>
+<input placeHolder="Enter City Name"> இல் இருந்து / From <br>
+<input placeHolder="Enter City Name"> வரை / To <br>
+<input placeHolder="Enter City Name"> இடைத்தங்கல் / Stay <br>
 
 <button onclick="getCityName()"> Submit </button>
 <p> </p>
@@ -194,7 +195,7 @@ color: yellow;
 </body>
 </html>
 
-இதைத் தவிர்க்கத் தான், div idஐ scriptக்குள் பயன்படுத்தப் போகிறோம்.  
+இதைத் தவிர்க்கத் தான், div idஐ scriptக்குள் பயன்படுத்தப் போகிறோம்.  [We use div id inside script in the below code snippet] 
 
 	<script>
 		function getCityName()
@@ -210,42 +211,42 @@ color: yellow;
 	</script>
 
 
-ஜாவாஸ்கிரிப்டைப் பயன்படுத்தி CSS கோப்பை எப்படிக் கையாள்வது? 
+ஜாவாஸ்கிரிப்டைப் பயன்படுத்தி CSS கோப்பை எப்படிக் கையாள்வது? How to handle CSS using Javascript?
 
 index.html: 
 
-<!DOCTYPE html>
-<html>
-	<head> 
-		<script type="text/javascript" src="demo.js"> </script>
-    <link rel="stylesheet" href="styles/layout.css"> 
-</head>	 
-<body>
-<h2> Select By Tag Name By ID எடுத்துக்காட்டு</h2>
-<div id = "cities">
-<input placeHolder="Enter City Name"> இல் இருந்து<br>
-<input placeHolder="Enter City Name"> வரை<br>
-<input placeHolder="Enter City Name"> இடைத்தங்கல்<br>
+	<!DOCTYPE html>
+	<html>
+		<head> 
+			<script type="text/javascript" src="demo.js"> </script>
+	    <link rel="stylesheet" href="styles/layout.css"> 
+	</head>	 
+	<body>
+	<h2> Select By Tag Name By ID எடுத்துக்காட்டு</h2>
+	<div id = "cities">
+	<input placeHolder="Enter City Name"> இல் இருந்து / From <br>
+	<input placeHolder="Enter City Name"> வரை / To <br>
+	<input placeHolder="Enter City Name"> இடைத்தங்கல் / Stay <br>
 
-<button onclick="getCityName()"> Submit </button>
-<p> </p>
-<p> </p>
-<p> </p>
+	<button onclick="getCityName()"> Submit </button>
+	<p> </p>
+	<p> </p>
+	<p> </p>
 
-</div>
-	<script>
-		function getCityName()
-	{
-	cityNamesInput = document.getElementsByTagName("input")
-	cityNamesOutput = document.getElementsByTagName("p")
-	cityNamesOutput[0].innerHTML =cityNamesInput[0].value
-	cityNamesOutput[1].innerHTML =cityNamesInput[1].value
-	cityNamesOutput[2].innerHTML =cityNamesInput[2].value
-	}
-		
-	</script>
-</body>
-</html>
+	</div>
+		<script>
+			function getCityName()
+		{
+		cityNamesInput = document.getElementsByTagName("input")
+		cityNamesOutput = document.getElementsByTagName("p")
+		cityNamesOutput[0].innerHTML =cityNamesInput[0].value
+		cityNamesOutput[1].innerHTML =cityNamesInput[1].value
+		cityNamesOutput[2].innerHTML =cityNamesInput[2].value
+		}
+
+		</script>
+	</body>
+	</html>
 
 
 layout.css:
@@ -354,10 +355,13 @@ color: yellow;
 Creating HTML Tag using Javascript: 
 
 1. ஒரு elementஐ உருவாக்கி(<p>) அதில் நம்முடைய வார்த்தைகளை அனுப்புவோம்.  
+// We are going to create a <p> tag first to send our data inside that. 
 
 2. இதைச் செய்ய ஒரு division உருவாக்கி, append செய்வோம்.  
+We shall create a division.  This division will be useful for appending <p> tag. 
 
-3. appendChild function மூலம் நாம் தட்டச்சிட்ட textஐ division tag சேமிக்கப் போகிறோம்.  
+3. appendChild function மூலம் நாம் தட்டச்சிட்ட textஐ division tag இல் சேமிக்கப் போகிறோம்.  
+We can sue appendChild() function 
 
 4. document.createElement("p") எனக் கொடுத்தால் paragraph element உருவாகி விடும்.  
 
