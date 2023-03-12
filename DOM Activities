@@ -1,0 +1,474 @@
+Activity #1:
+------------
+DOM - Select By Tag Name:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="demo.js"> </script>
+<style>
+input{width:40%;height:50px;}
+h2, p
+{
+color:blue;
+}
+button
+{
+width:40%;
+height:50px;
+background-color: black;
+color: yellow;
+}
+</style>
+</head>
+<body>
+<h2> Select By Tag Name எடுத்துக்காட்டு</h2>
+<input placeHolder="Enter City Name"> இல் இருந்து/ From<br>
+<input placeHolder="Enter City Name"> வரை / To <br>
+<input placeHolder="Enter City Name"> இடைத்தங்கல் / Stay<br>
+<button onclick="getCityName()"> Submit </button>
+<p> </p>
+<p> </p>
+<p> </p>
+	<script>
+		function getCityName()
+	{
+	cityNamesInput = document.getElementsByTagName("input")
+	cityNamesOutput = document.getElementsByTagName("p")
+	cityNamesOutput[0].innerHTML =cityNamesInput[0].value
+	cityNamesOutput[1].innerHTML =cityNamesInput[1].value
+	cityNamesOutput[2].innerHTML =cityNamesInput[2].value
+	}
+
+	</script>
+</body>
+</html>
+
+
+மேல் உள்ளதைக் கையாளத் தான் for loop.  [To handle this repeated activity, we go with for loop]
+for(let i=0; i<cityNamesInput.length;i++)
+{
+cityNamesOutput[i].innerHTML =cityNamesInput[i].value
+}
+
+
+--------------------
+Activity #2:
+------------
+
+Select By Tag Name By ID:
+tag வைத்து எடுக்கும் போது எல்லா inputஉம் வர வாய்ப்பு உள்ளதே!  அதை எப்படிக் கையாள்வது?
+அதற்குத் தான் div id பயன்படுத்தப் போகிறோம்.
+[If We use tag, We shall get all inputs, right?  How can we handle that?  That's the reason, we go with div id]
+
+கீழ் உள்ளதைச் செயல்படுத்தி அதில் உள்ள சிக்கலைக் கவனியுங்கள்.  [Kindly observe the difficulty in below code]
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="demo.js"> </script>
+<style>
+input{width:40%;height:50px;}
+h2, p
+{
+color:blue;
+}
+button
+{
+width:40%;
+height:50px;
+background-color: black;
+color: yellow;
+}
+</style>
+</head>
+<body>
+<h2> Select By Tag Name By ID எடுத்துக்காட்டு</h2>
+<input placeHolder="Enter City Name"> இல் இருந்து / From <br>
+
+<div id = "cities">
+<input placeHolder="Enter City Name"> இல் இருந்து / From <br>
+<input placeHolder="Enter City Name"> வரை / To <br>
+<input placeHolder="Enter City Name"> இடைத்தங்கல் / Stay <br>
+
+<button onclick="getCityName()"> Submit </button>
+<p> </p>
+<p> </p>
+<p> </p>
+
+</div>
+	<script>
+		function getCityName()
+	{
+	cityNamesInput = document.getElementsByTagName("input")
+	cityNamesOutput = document.getElementsByTagName("p")
+	cityNamesOutput[0].innerHTML =cityNamesInput[0].value
+	cityNamesOutput[1].innerHTML =cityNamesInput[1].value
+	cityNamesOutput[2].innerHTML =cityNamesInput[2].value
+	}
+
+	</script>
+</body>
+</html>
+
+இதைத் தவிர்க்கத் தான், div idஐ scriptக்குள் பயன்படுத்தப் போகிறோம்.  [We use div id inside script in the below code snippet]
+
+	<script>
+		function getCityName()
+	{
+       cityDivision = document.getElementById("cities")
+	cityNamesInput = cityDivision.getElementsByTagName("input")
+	cityNamesOutput = document.getElementsByTagName("p")
+	cityNamesOutput[0].innerHTML =cityNamesInput[0].value
+	cityNamesOutput[1].innerHTML =cityNamesInput[1].value
+	cityNamesOutput[2].innerHTML =cityNamesInput[2].value
+	}
+
+	</script>
+
+------------------------------------------------
+Activity #3:
+----------
+
+ஜாவாஸ்கிரிப்டைப் பயன்படுத்தி CSS கோப்பை எப்படிக் கையாள்வது? How to handle CSS using Javascript?
+
+index.html:
+
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<script type="text/javascript" src="demo.js"> </script>
+	    <link rel="stylesheet" href="styles/layout.css">
+	</head>
+	<body>
+	<h2> Select By Tag Name By ID எடுத்துக்காட்டு</h2>
+	<div id = "cities">
+	<input placeHolder="Enter City Name"> இல் இருந்து / From <br>
+	<input placeHolder="Enter City Name"> வரை / To <br>
+	<input placeHolder="Enter City Name"> இடைத்தங்கல் / Stay <br>
+
+	<button onclick="getCityName()"> Submit </button>
+	<p> </p>
+	<p> </p>
+	<p> </p>
+
+	</div>
+		<script>
+			function getCityName()
+		{
+		cityNamesInput = document.getElementsByTagName("input")
+		cityNamesOutput = document.getElementsByTagName("p")
+		cityNamesOutput[0].innerHTML =cityNamesInput[0].value
+		cityNamesOutput[1].innerHTML =cityNamesInput[1].value
+		cityNamesOutput[2].innerHTML =cityNamesInput[2].value
+		}
+
+		</script>
+	</body>
+	</html>
+
+
+layout.css:
+input{width:40%;height:50px;}
+h2, p
+{
+color:blue;
+}
+button
+{
+width:40%;
+height:50px;
+background-color: black;
+color: yellow;
+}
+
+demo.js:
+--------
+function getCityName()
+{
+    cityDivision = document.getElementById("cities")
+	cityNamesInput = cityDivision.getElementsByTagName("input")
+	cityNamesOutput = document.getElementsByTagName("p")
+for(i=0;i<cityNamesInput.length;i++)
+    {
+	cityNamesOutput[i].innerHTML =cityNamesInput[i].value;
+    cityNamesOutput[i].style.color = "green";
+	}
+}
+
+தேவைப்பட்டால்:
+cityNamesOutput[i].style.backgroundColor = "yellow";
+
+-------------------------------
+
+Activity #4:
+-----------
+JavaScript Date:
+
+<!DOCTYPE html>
+<html>
+	<head>
+
+    <link rel="stylesheet" href="styles/layout.css">
+    <script type="text/javascript" src="demo.js"> </script>
+</head>
+<body>
+<h2> JavaScript Date எடுத்துக்காட்டு</h2>
+
+		<p id = "p1">  </p>
+	<button onclick="start()"> Start </button>
+	<button onclick = "stop()"> Stop </button>
+
+	</body>
+</html>
+
+demo.js:
+--------
+function changeColor()
+		{
+			date = new Date();
+			hour = date.getHours();
+			minute = date.getMinutes();
+			second = date.getSeconds();
+			fulldate = date.toLocaleTimeString()
+			//fulldate = date.toLocaleTimeString('en-US')
+			fulldate = date.toLocaleTimeString('en-GB')
+			x = document.getElementById("p1");
+		    x.innerHTML = fulldate;
+			if(second%2==0)
+			{
+				x.style.color="red";
+			}
+			else
+			{
+				x.style.color = "blue";
+			}
+
+		}
+	function start()
+	{
+		clear = setInterval(changeColor, 1000);
+	}
+	function stop()
+	{
+		clearInterval(clear);
+	}
+
+layout.css:
+----------
+input{width:40%;height:50px;}
+h2
+{
+color:bl;
+}
+p
+{
+	background-color: yellow;
+}
+button
+{
+width:40%;
+height:50px;
+background-color: black;
+color: yellow;
+}
+
+
+-------------------
+Activity #5:
+-----------
+Creating HTML Tag using Javascript:
+
+1. ஒரு elementஐ உருவாக்கி(<p>) அதில் நம்முடைய வார்த்தைகளை அனுப்புவோம்.
+// We are going to create a <p> tag first to send our data inside that.
+
+2. இதைச் செய்ய ஒரு division உருவாக்கி, append செய்வோம்.
+We shall create a division.  This division will be useful for appending <p> tag.
+
+3. appendChild function மூலம் நாம் தட்டச்சிட்ட textஐ division tag இல் சேமிக்கப் போகிறோம்.
+We can sue appendChild() function
+
+4. document.createElement("p") எனக் கொடுத்தால் paragraph element உருவாகி விடும்.
+
+5. document.createTextNode("Hi") எனக் கொடுத்தால் text node உருவாகி விடும்.
+
+6. இந்த இரண்டையும் ஒரு divisionஇல் காட்டுவோம்.
+
+
+index2.html:
+-----------
+<!DOCTYPE html>
+<html>
+	<head>
+    <link rel="stylesheet" href="styles/layout.css">
+    <script type="text/javascript" src="demo.js"> </script>
+</head>
+<body>
+<h2> Creating HTML Element எடுத்துக்காட்டு</h2>
+<div id='mydiv'>
+
+</div>
+<input placeholder="Enter your inputs here" id="input_text"> <br>
+	<button onclick= "create()"> Submit </button>
+
+	</body>
+</html>
+
+layout.css
+---------
+*{box-sizing: border-box;}
+
+input{
+	width: 30%;
+	height: 50px;
+	color: green;
+	font-size: 20px;
+	background-color: white;
+}
+h2{
+	color: black;
+}
+button
+{
+width: 25%;
+height: 30px;
+font-size: 24px;
+background-color: lime;
+color: black;
+border-radius: 20%
+
+}
+div
+{
+	width: 30%;
+	height: 200px;
+	border: 1px dotted blue;
+	background-color: #f1f1f1;
+}
+
+p
+{
+color: blue;
+font-size: 20px;
+font-weight: bold;
+}
+
+demo.js:
+-------
+function create()
+{
+content = document.getElementById("input_text").value;
+element = document.createElement("p") //இங்கே <p></p> வந்திருக்கும்.
+our_data = document.createTextNode(content); //இங்கே நம்முடைய text
+element.appendChild(our_data);
+mydiv = document.getElementById("mydiv");
+mydiv.appendChild(element);
+}
+
+----------------------------------
+
+Activity #6:
+------------
+
+Simple Calculator:
+-----------------
+Simple Calculator Using JavaScript:
+index2.html
+------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Simple Calculator </title>
+	<link rel="stylesheet" href="styles/layout.css">
+	</head>
+	<body>
+		<h2> Simple Calculator Using JavaScript </h2>
+		<div class = "calc_form">
+			<form name="form1">
+				<input id = "calc" type="text" name="results">
+				<br> <br>
+<input type="button" value="1"   onclick="form1.results.value = form1.results.value+'1'">
+				<input type="button" value="2" onclick="form1.results.value = form1.results.value+'2'">
+				<input type="button" value="3"onclick="form1.results.value = form1.results.value+'3'">
+				<input type="button" value="+"onclick="form1.results.value = form1.results.value+ '+'">
+
+				<br> <br>
+				<input type="button" value="4"onclick="form1.results.value = form1.results.value+'4'">
+				<input type="button" value="5"onclick="form1.results.value = form1.results.value+'5'">
+				<input type="button" value="6"onclick="form1.results.value = form1.results.value+'6'">
+				<input type="button" value="-"onclick="form1.results.value = form1.results.value+'-'">
+
+				<br> <br>
+				<input type="button" value="7" onclick="form1.results.value = form1.results.value+'7'">
+				<input type="button" value="8"onclick="form1.results.value = form1.results.value+'8'">
+				<input type="button" value="9"onclick="form1.results.value = form1.results.value+'9'">
+<input type="button" value="*" onclick="form1.results.value = form1.results.value+'*'">
+
+				<br> <br>
+				<input type="button" value="0"onclick="form1.results.value = form1.results.value+'0'">
+				<input type="button" value="/"onclick="form1.results.value = form1.results.value+'/'">
+				<input type="button" value="."onclick="form1.results.value = form1.results.value+'.'">
+				<input type="button" value="=" onclick="form1.results.value = eval(form1.results.value)">
+
+<br>
+<input type="button" id="clear" value="Clear All" onclick="form1.results.value =''">
+
+			</form>
+
+		</div>
+
+	</body>
+</html>
+
+---------
+layout.css
+---------
+h2
+{
+	text-align: center;
+	background-color: brown;
+	color: white;
+}
+input
+{
+	width: 25px;
+	background-color: #f1f1f1;
+	color: black;
+	border: 1px solid brown;
+	border-radius: 8px;
+	padding: 20px;
+	margin: 5px;
+
+}
+#calc
+	{
+	width: 180px;
+	background-color: #f1f1f1;
+	color: black;
+	border: 1px solid brown;
+	border-radius: 8px;
+	padding: 20px;
+	margin: 5px;
+	}
+#clear
+	{
+	width: 180px;
+	background-color: #f1f1f1;
+	color: black;
+	border: 1px solid brown;
+	border-radius: 8px;
+	padding: 20px;
+	margin: 5px;
+	}
+
+
+
+-----------------------------
+
+Activity #7:
+----------
+https://github.com/muthu1809/HTML-/blob/main/Color%20Flipper%20JS
+
+Activity #8:
+----------
+https://github.com/muthu1809/HTML-/blob/main/Image%20Slider%20JS
