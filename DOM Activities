@@ -1,3 +1,29 @@
+DOM Events: 
+
+Activity #0.1: 
+-----------
+<input type="text" onchange="alert(this.value)">
+<input type="button" value="Button">
+
+Activity #0.2:
+-------------
+<select onchange="alert(this.value)">
+  <option value="">Favourite Actor</option>
+  <option value="1">Rajini</option>
+  <option value="2">Kamal</option>
+  <option value="3">Vijayakanth</option>
+</select>
+
+Activity #0.3: 
+---------------
+<input type="text" id="input"> oninput: <span id="result"></span>
+<script>
+  input.oninput = function() {
+    result.innerHTML = input.value;
+  };
+</script>
+
+
 Activity #1:
 ------------
 DOM - Select By Tag Name:
